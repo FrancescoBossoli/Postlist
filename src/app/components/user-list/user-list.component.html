@@ -1,0 +1,17 @@
+<div class="d-flex flex-wrap justify-content-center mt-5">
+    <div *ngFor="let user of users" class="col-3 mt-2 mx-2">
+        <a class="card mb-3 d-flex justify-content-center flex-row text-decoration-none text-black" style="max-width: 540px;" [routerLink]="[(user.id)]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="userToVisit(user)">
+            <div class="row gx-0 d-flex align-items-center col-12">
+                <div class="col-3 d-flex justify-content-end">
+                    <img src={{user.avatar}} class="img-fluid rounded-start" alt={{user.name}} width="40px">
+                </div>
+                <div class="col-9">
+                    <div class="card-body">
+                        <h5 class="card-title">{{user.name}}</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

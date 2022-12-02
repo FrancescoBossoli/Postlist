@@ -1,0 +1,4 @@
+<app-postcard *ngFor="let post of posts" [p]="post">
+    <button class="btn btn-danger me-2" (click)="changeActiveStatus(post.id)">Disattiva</button>
+    <a class="btn btn-primary" [routerLink]="[(post.id)]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="postToVisit(post)">Visualizza</a>
+</app-postcard>

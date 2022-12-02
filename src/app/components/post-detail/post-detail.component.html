@@ -1,0 +1,32 @@
+<div class="card bg-warning my-3 w-75 mx-auto" *ngIf="post.type == 'education'">
+    <h5 class="card-header"><span highlight>Post n.{{post.id}}</span></h5>
+
+    <div class="card-body">
+        <h5 class="card-title">{{post.title | uppercase}}</h5>
+        <p class="badge rounded-pill text-bg-danger">{{post.type}}</p>
+        <p class="card-text">{{post.body}}</p>
+        <p class="card-text text-end fst-italic">{{post.author}}</p>
+    </div>
+</div>
+<div class="card bg-success bg-opacity-50 my-3 w-75 mx-auto" *ngIf="post.type == 'news'">
+    <h5 class="card-header"><span highlight>Post n.{{post.id}}</span></h5>
+
+    <div class="card-body">
+        <h5 class="card-title">{{post.title | uppercase}}</h5>
+        <p class="badge rounded-pill text-bg-light">{{post.type}}</p>
+        <p class="card-text">{{post.body}}</p>
+        <p class="card-text text-end fst-italic">{{post.author}}</p>
+    </div>
+</div>
+<div class="card bg-info text-bg-info my-3 w-75 mx-auto" *ngIf="post.type == 'politic'">
+    <h5 class="card-header"><span highlight>Post n.{{post.id}}</span></h5>
+
+    <div class="card-body">
+        <h5 class="card-title">{{post.title | uppercase}}</h5>
+        <p class="badge rounded-pill text-bg-success">{{post.type}}</p>
+        <p class="card-text">{{post.body}}</p>
+        <p class="card-text text-end fst-italic">{{post.author}}</p>
+    </div>
+</div>
+
+

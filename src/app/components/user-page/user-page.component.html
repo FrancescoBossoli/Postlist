@@ -1,0 +1,24 @@
+<div class="d-flex flex-wrap justify-content-center">
+<div class="card mb-3 d-flex justify-content-center flex-row text-decoration-none text-black" style="max-width: 540px;">
+    <div class="row gx-0 d-flex align-items-center col-12">
+      <div class="col-5 d-flex justify-content-end">
+        <img src={{user.avatar}} class="img-fluid rounded-start" alt={{user.name}}>
+      </div>
+      <div class="col-7">
+        <div class="card-body">
+          <h5 class="card-title">{{user.name}}</h5>
+          <p class="card-text">email: {{user.email}}</p>
+          <p class="card-text">website role: {{user.role}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 class="text-center">Posts Attivi</h2>
+<app-postcard *ngFor="let post of postsAttivi" [p]="post">
+    <button class="btn btn-danger me-2" (click)="changeActiveStatus(post.id)">Disattiva</button>
+</app-postcard>
+<h2 class="text-center">Posts Inattivi</h2>
+<app-postcard *ngFor="let post of postsInattivi" [p]="post">
+    <button class="btn btn-success me-2" (click)="changeActiveStatus(post.id)">Attiva</button>
+</app-postcard>

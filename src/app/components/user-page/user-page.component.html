@@ -17,8 +17,10 @@
 <h2 class="text-center">Posts Attivi</h2>
 <app-postcard *ngFor="let post of postsAttivi" [p]="post">
     <button class="btn btn-danger me-2" (click)="changeActiveStatus(post.id)">Disattiva</button>
+    <a class="btn btn-primary" [routerLink]="'/active/'+ post.id" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="postToVisit(post)">Visualizza</a>
 </app-postcard>
 <h2 class="text-center">Posts Inattivi</h2>
 <app-postcard *ngFor="let post of postsInattivi" [p]="post">
     <button class="btn btn-success me-2" (click)="changeActiveStatus(post.id)">Attiva</button>
+    <a class="btn btn-primary" [routerLink]="'/inactive/'+ post.id" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="postToVisit(post)">Visualizza</a>
 </app-postcard>
